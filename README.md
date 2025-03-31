@@ -1,5 +1,7 @@
 # **Marketing A/B Testing**
 
+1. Description.
+
 The companies are interested in answering two questions:
 
 1. Would the campaign be successful?
@@ -19,3 +21,33 @@ The idea of the dataset is to analyze the groups, find if the ads were successfu
 - most ads day: Day that the person saw the biggest amount of ads
 - most ads hour: Hour of day that the person saw the biggest amount of ads
 
+
+2. Análisis Exploratorio (EDA)
+
+- Balanceo de grupos: Comparar la proporción de usuarios en psa vs ad. Si hay desbalanceo, considerar técnicas como estratificación.
+
+- Tasa de conversión global y por grupo (ad vs psa).
+
+- Usar un boxplot para detectar usuarios con valores extremos (ej. 72 anuncios vs 2). Decidir si truncar o segmentar.
+
+- Patrones temporales: Analizar si la conversión varía por most ads day o most ads hour (ej. ¿Los usuarios expuestos en horario laboral convierten más?).
+
+3. Estadísticas Descriptivas Clave
+
+- Mediana y media de total_ads por grupo (la media puede ser sensible a outliers).
+- Frecuencia de días/horas con mayor actividad.
+
+4. Hipótesis para el A/B Testing
+
+- Hipótesis nula (H₀): No hay diferencia en la tasa de conversión entre psa y ad.
+
+-Hipótesis alternativa (H₁): El grupo ad tiene una tasa de conversión mayor.
+
+5. Métricas a Comparar
+Métrica principal: Tasa de conversión (converted).
+
+Métricas secundarias:
+
+Engagement: total_ads (si el grupo ad ve más anuncios, ¿afecta a la conversión?).
+
+Efecto temporal: ¿La hora/día influye en la conversión?
